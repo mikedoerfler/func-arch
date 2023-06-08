@@ -8,13 +8,13 @@ function Counter(props) {
             <div>{props.counter}</div>
             <button
                 type="button"
-                onClick={props.onIncrement}>
-                +
+                onClick={props.onDecrement}>
+                -
             </button>
             <button
                 type="button"
-                onClick={props.onDecrement}>
-                -
+                onClick={props.onIncrement}>
+                +
             </button>
         </div>
 
