@@ -1,16 +1,19 @@
-import {DECREMENT, INCREMENT} from "./actions";
+import * as actions from "./actions";
+import {handleActions} from "redux-actions";
 
 const initialState = 0;
 
-function reducer(state = initialState, action){
-    switch (action.type){
-        case INCREMENT:
-            return state + 1;
-        case DECREMENT:
-            return state -1;
-        default:
-            return state;
-    }
+function decrement(state){
+    return state - 1;
 }
 
-export default reducer;
+function increment(state){
+    return state + 1;
+}
+
+export default handleActions({
+        [actions.increment] : increment,
+        [actions.decrement] : decrement
+    },
+    initialState
+);

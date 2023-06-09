@@ -1,4 +1,6 @@
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
+import {createAction} from "redux-actions";
 
-export {INCREMENT, DECREMENT};
+const increment = createAction('INCREMENT');
+const decrement = createAction('DECREMENT');
+
+export {increment, decrement};
