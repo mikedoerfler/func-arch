@@ -8,7 +8,7 @@ function ColorList(props) {
             {props.list.map(color =>
                 <ColorItem
                     color={color}
-                    ke={color.id}
+                    key={color.id}
                 />
             )}
         </div>
