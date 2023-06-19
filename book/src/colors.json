@@ -1,0 +1,12 @@
+[
+  {
+    "colorId": 0,
+    "hexString": "#000000",
+    "name": "Black"
+  },
+  {
+    "colorId": 1,
+    "hexString": "#800000",
+    "name": "Maroon"
+  }
+]

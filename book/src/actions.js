@@ -1,6 +1,6 @@
 import {createAction} from "redux-actions";
 
-const increment = createAction('INCREMENT');
-const decrement = createAction('DECREMENT');
+const setList = createAction('SET_LIST');
+const changeSearch = createAction('CHANGE_SEARCH');
 
-export {increment, decrement};
+export {setList, changeSearch};

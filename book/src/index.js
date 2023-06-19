@@ -6,11 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import {legacy_createStore} from "redux";
 import reducer from "./reducer";
 import {Provider} from "react-redux";
+import colors from './colors.json';
+import * as actions from "./actions";
 
 const store = legacy_createStore(
     reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
+store.dispatch(actions.setList(colors));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

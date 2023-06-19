@@ -1,19 +1,28 @@
-import * as actions from "./actions";
 import {handleActions} from "redux-actions";
+import * as actions from "./actions";
 
-const initialState = 0;
+const initialState = Object.freeze({
+    list: [],
+    searchTerm: ''
+});
 
-function decrement(state){
-    return state - 1;
+function setList(state, action) {
+    return {
+        ...state,
+        list: action.payload
+    };
 }
 
-function increment(state){
-    return state + 1;
+function changeSearch(state, action) {
+    return {
+        ...state,
+        searchTerm: action.payload
+    };
 }
 
 export default handleActions({
-        [actions.increment] : increment,
-        [actions.decrement] : decrement
+        [actions.setList]: setList,
+        [actions.changeSearch]: changeSearch
     },
     initialState
 );
